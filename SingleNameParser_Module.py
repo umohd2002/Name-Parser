@@ -202,7 +202,9 @@ def Name_Parser(line,initials,originalInput):
         dict_found={}
         for k,v in sorted_Found.items():
             for i in v:
+                print('k',k,'k')
                 dict_found[i]=k
+                
         nest_list=[]
         # print(dict_found)
         mask=Mask_1.replace(",","")
@@ -210,7 +212,7 @@ def Name_Parser(line,initials,originalInput):
             token=""
             for k,v in FirstPhaseList[i].items():
                 token=v
-                # print(dict_found[i+1])
+                print(component_dict[dict_found[i+1]])
                 component_description = component_dict[dict_found[i+1]]
             uiMappings.append([token,dict_found[i+1],mask[i],component_description])
         # print("UiMappings: ",uiMappings)

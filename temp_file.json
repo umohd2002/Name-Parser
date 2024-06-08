@@ -1,9 +1,9 @@
 {
-    "NameBatch.txt": {
-        "result": "Detailed_Report of NameBatch.txt is Generated! \n\nThe NameBatch_Output.zip is downloaded, please check your download's directory. \n\n\nTotal Number of Names: -\t5\nUnique Pattern Count: -\t1\n\n\nNumber of Pattern Parsed Names: -\t5\nPercentage of Patterns Parsed Result:  -\t100.00%\n\nNumber of Exceptions Thrown: -\t\t0\nPercentage of RuleBased Parsed Result: -\t0.00%\n",
+    "hifen_comma.txt": {
+        "result": "Detailed_Report of hifen_comma.txt is Generated! \n\nThe hifen_comma_Output.zip is downloaded, please check your download's directory. \n\n\nTotal Number of Names: -\t50\nUnique Pattern Count: -\t2\n\n\nNumber of Pattern Parsed Names: -\t27\nPercentage of Patterns Parsed Result:  -\t54.00%\n\nNumber of Exceptions Thrown: -\t\t23\nPercentage of RuleBased Parsed Result: -\t46.00%\n",
         "metrics": {
-            "metrics": "Detailed_Report of NameBatch.txt is Generated! \n\nThe NameBatch_Output.zip is downloaded, please check your download's directory. \n\n\nTotal Number of Names: -\t5\nUnique Pattern Count: -\t1\n\n\nNumber of Pattern Parsed Names: -\t5\nPercentage of Patterns Parsed Result:  -\t100.00%\n\nNumber of Exceptions Thrown: -\t\t0\nPercentage of RuleBased Parsed Result: -\t0.00%\n"
+            "metrics": "Detailed_Report of hifen_comma.txt is Generated! \n\nThe hifen_comma_Output.zip is downloaded, please check your download's directory. \n\n\nTotal Number of Names: -\t50\nUnique Pattern Count: -\t2\n\n\nNumber of Pattern Parsed Names: -\t27\nPercentage of Patterns Parsed Result:  -\t54.00%\n\nNumber of Exceptions Thrown: -\t\t23\nPercentage of RuleBased Parsed Result: -\t46.00%\n"
         },
-        "output_file_path": "Output/Batch File Output/NameBatch_output.zip"
+        "output_file_path": "Output/Batch File Output/hifen_comma_output.zip"
     }
 }

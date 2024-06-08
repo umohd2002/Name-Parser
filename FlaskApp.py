@@ -861,22 +861,27 @@ from ORM import ClueTable
 @app.route('/ClueComponents', methods=["GET","POST"])
 def CLUE_Components():
     sessions = Session()
-    result= {}
-    database_url = 'sqlite:///KnowledgeBase.db'
-    Database_schema = CRUD(database_url)
+    result = {}
+    
     if request.method == "POST":
-        clue_data = sessions.query(ClueTable).all()
+        data = request.get_json()
+        mask_token = data.get('maskToken')
+        query = data.get('query', '').lower()
+
+        query_filter = sessions.query(ClueTable)
+        if mask_token:
+            query_filter = query_filter.filter(ClueTable.token == mask_token)
+        
+        clue_data = query_filter.all()
+        
         for row in clue_data:
             component = row.component_desc
             token = row.token
-            if component not in result:
-                result[component] = []
-            result[component].append(token)
-        result[component] = token
-       
+            
+            if query in component.lower():
+                result[component] = token
+
         return jsonify(result=result)
-    elif request.method == "GET":
-        return jsonify(message="GET request received for CLUEComponents")
     return jsonify(result=result)
 
 from ORM import ClueTable
@@ -952,4 +957,4 @@ def add_new_ClueComponent():
     
 if __name__ == '__main__':
     
-    app.run(port=8080, debug=True)
+    app.run(port=5000, debug=True)
